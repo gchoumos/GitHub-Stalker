@@ -2,7 +2,11 @@
 SETTINGS = {
     'repositories': [
         'agri-hub/callisto-dataset-collection',
-        'agri-hub/space2ground'
+        'agri-hub/space2ground',
+        'agri-hub/datacap',
+        'agri-hub/mapillary_annotation',
+        'agri-hub/callisto',
+        'agri-hub/adc'
     ],
     'slack_channel_id': 'C02H6G73YTR', # replace with your own (this is not valid)
     # replace token with your own! The below is an example and not a valid one!
