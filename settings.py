@@ -8,6 +8,7 @@ SETTINGS = {
     # replace token with your own! The below is an example and not a valid one!
     'token': 'your-slackbot-token',
     'gh_url': 'https://api.github.com/repos',
+    'slack_no_updates': False, # If True, it will send a Slack message, even when no updates exist
 }
 
 # If you want to have redacted settings (e.g., have your application token

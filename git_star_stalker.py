@@ -95,17 +95,16 @@ for repo in repos:
         )
 
 try:
-    slack_message = '\n'.join(slack_messages)
-    # slack_message = "New :stars: for `Callisto Dataset Collection`! Current stars: 82"
+    if updates or SETTINGS['slack_no_updates']:
+        slack_message = '\n'.join(slack_messages)
 
-    result = client.chat_postMessage(
-      channel=channel_id,
-      text=slack_message
-    )
-    print(result)
+        result = client.chat_postMessage(
+          channel=channel_id,
+          text=slack_message
+        )
+        print(result)
 
-    # We successfully sent the updates, so let's update the current status
-    # by saving it to the json file
+    # Update the current status by saving it to the json file
 
     # remove previous backup (if exists)
     if os.path.exists("repo-status.json.bak"):
