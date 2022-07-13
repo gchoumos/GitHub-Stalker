@@ -64,7 +64,7 @@ if not updates:
     slack_messages =  ['No updates detected in the monitored repositories']
 else:
     slack_messages =  ['GitHub Repository Updates']
-    slack_messages.append('')
+    slack_messages.append('```')
 
 for repo in repos:
     # Will be true if updates exist
@@ -96,6 +96,7 @@ for repo in repos:
 
 try:
     if updates or SETTINGS['slack_no_updates']:
+        slack_messages.append('```')
         slack_message = '\n'.join(slack_messages)
 
         result = client.chat_postMessage(
