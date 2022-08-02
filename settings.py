@@ -6,7 +6,8 @@ SETTINGS = {
         'agri-hub/datacap',
         'agri-hub/mapillary_annotation',
         'agri-hub/callisto',
-        'agri-hub/adc'
+        'agri-hub/adc',
+        'gchoumos/mapillary'
     ],
     'slack_channel_id': 'C02H6G73YTR', # replace with your own (this is not valid)
     # replace token with your own! The below is an example and not a valid one!
